@@ -1,0 +1,6 @@
+{
+    "name": "Voice Assistant",
+    "render_readme": true,
+    "domains": ["media_player"],
+    "persistent_directory": "userfiles"
+}
