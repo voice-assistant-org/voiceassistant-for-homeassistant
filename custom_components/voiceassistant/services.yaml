@@ -1,0 +1,69 @@
+# Describes the format for available Voice Assistant services
+
+reload:
+  name: Reload
+  description: Reload Voice Assistant
+  target:
+    entity:
+      integration: voiceassistant
+      domain: media_player
+    device:
+      integration: voiceassistant
+
+trigger:
+  name: Trigger
+  description: Trigger Voice Assistant
+  target:
+    entity:
+      integration: voiceassistant
+      domain: media_player
+    device:
+      integration: voiceassistant
+
+say:
+  name: Say
+  description: Perform Voice Assistant Text-to-Speech
+  fields:
+    message:
+      name: Message
+      required: true
+      description: Message to be pronounced
+      example: Hello From Home Assistant
+      selector:
+        text:
+    cache:
+      name: Cache
+      description: Whether to cache audio output of TTS in Voice Assistant
+      required: true
+      selector:
+        boolean:
+  target:
+    entity:
+      integration: voiceassistant
+      domain: media_player
+    device:
+      integration: voiceassistant
+
+say_random:
+  name: Say Random
+  description: Perform Voice Assistant Text-to-Speech on a randomly selected text
+  fields:
+    message_list:
+      name: Messages
+      required: true
+      description: List of messages to randomly select from
+      example: "- Message 1\n- Message 2"
+      selector:
+        object:
+    cache:
+      name: Cache
+      description: Whether to cache audio output of TTS in Voice Assistant
+      required: true
+      selector:
+        boolean:
+  target:
+    entity:
+      integration: voiceassistant
+      domain: media_player
+    device:
+      integration: voiceassistant

@@ -1,0 +1,19 @@
+{
+    "config": {
+      "error": {
+        "invalid_host": "Host is invalid, must be an IP address",
+        "invalid_auth": "Authentication failed, check your token and host, make sure device is running."
+      },
+      "step": {
+        "user": {
+          "data": {
+            "name": "Device name",
+            "host": "IP address",
+            "token": "Access token",
+            "add_another": "Add another device?"
+          },
+          "description": "Configure Voice Assistant device"
+        }
+      }
+    }
+  }
