@@ -121,8 +121,6 @@ class VoiceAssistantEntity(MediaPlayerEntity):
         return {
             "identifiers": {(DOMAIN, self.unique_id)},
             "name": self.name,
-            "manufacturer": "Pussy Corp",
-            "model": "Sexy",
         } | self._vass_info
 
     @property
